@@ -54,7 +54,7 @@ resource "aws_security_group" "ecs_node_sg" {
 
 resource "aws_launch_template" "ecs_ec2" {
   name_prefix            = "demo-ecs-ec2-"
-  image_id               = "ami-07fb310320024d646"
+  image_id               = "ami-07fb310320024d646"   #ca-central-1 specific
   instance_type          = "t3.micro"
   vpc_security_group_ids = [aws_security_group.ecs_node_sg.id]
 
